@@ -27,7 +27,7 @@ public class ExecutaQuery {
     private final String CMIS_USER = "demo";
     private final String CMIS_PASSWORD = "demo";
 
-    // ID da pasta que será usuda para testar os comandos CMIS
+    // ID da pasta que será usada para testar os comandos CMIS
     private final String FOLDER_ID = "69d92d45-42ac-493b-a230-d176ca73496e";
 
     /**
@@ -88,7 +88,7 @@ public class ExecutaQuery {
         for(QueryResult result : folderItems) {
             System.out.println("\t" + result.getPropertyById("cmis:name").getValues().get(0));
 
-            //Le todas as propriedades do item e prepara para a apresentação
+            //Lê todas as propriedades do item e prepara para a apresentação
             for(PropertyData propertyData : result.getProperties()){
                 System.out.println("\t\t" + propertyData.getDisplayName() + ": " + propertyData.getValues());
             }
